@@ -1,0 +1,1042 @@
+:root {
+  color: #17231d;
+  background: #f7f4ed;
+  font-family:
+    'Avenir Next',
+    'Segoe UI',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --ink: #17231d;
+  --muted: #66716b;
+  --paper: #f7f4ed;
+  --surface: #fffdf8;
+  --line: #dfddd5;
+  --green: #134f3b;
+  --green-soft: #e0eee7;
+  --coral: #ef715d;
+  --coral-dark: #c84f3d;
+  --yellow: #f3c85a;
+  --warning: #8a5b00;
+  --shadow: 0 16px 44px rgba(27, 42, 34, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  color: inherit;
+  font: inherit;
+}
+
+button,
+a,
+select,
+input {
+  outline-offset: 3px;
+}
+
+a {
+  color: inherit;
+}
+
+.skip-link {
+  background: var(--ink);
+  color: white;
+  left: 1rem;
+  padding: 0.75rem 1rem;
+  position: fixed;
+  top: -5rem;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.site-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1240px;
+  padding: 1.35rem 2rem;
+}
+
+.brand {
+  align-items: center;
+  display: inline-flex;
+  font-family: 'Avenir Next', 'Segoe UI', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  gap: 0.7rem;
+  text-decoration: none;
+}
+
+.brand__mark {
+  align-items: center;
+  background: var(--coral);
+  border-radius: 50% 50% 44% 56%;
+  color: #28100d;
+  display: inline-flex;
+  font-size: 0.69rem;
+  height: 2.25rem;
+  justify-content: center;
+  letter-spacing: -0.05em;
+  transform: rotate(-7deg);
+  width: 2.25rem;
+}
+
+.site-header nav {
+  display: flex;
+  font-size: 0.92rem;
+  font-weight: 600;
+  gap: 2rem;
+}
+
+.site-header nav a {
+  text-decoration: none;
+}
+
+.site-header nav a:hover {
+  color: var(--coral-dark);
+}
+
+.hero {
+  align-items: end;
+  background:
+    radial-gradient(
+      circle at 82% 20%,
+      rgba(243, 200, 90, 0.95) 0 5rem,
+      transparent 5.1rem
+    ),
+    linear-gradient(125deg, #174f3d 0%, #0d3d2f 100%);
+  border-radius: 2rem;
+  color: white;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr auto;
+  margin: 0 auto;
+  max-width: 1240px;
+  min-height: 470px;
+  overflow: hidden;
+  padding: clamp(2.25rem, 6vw, 5.25rem);
+  position: relative;
+}
+
+.hero::after {
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  border-radius: 50%;
+  content: '';
+  height: 22rem;
+  position: absolute;
+  right: -8rem;
+  top: -10rem;
+  width: 22rem;
+}
+
+.hero__content {
+  max-width: 760px;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  align-items: center;
+  color: var(--coral-dark);
+  display: flex;
+  font-family: 'Avenir Next', 'Segoe UI', sans-serif;
+  font-size: 0.73rem;
+  font-weight: 800;
+  gap: 0.55rem;
+  letter-spacing: 0.13em;
+  margin: 0 0 0.8rem;
+  text-transform: uppercase;
+}
+
+.hero .eyebrow {
+  color: #ffd7cc;
+}
+
+.pulse {
+  background: var(--coral);
+  border: 3px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(239, 113, 93, 0.3);
+  height: 0.55rem;
+  width: 0.55rem;
+}
+
+.hero h1 {
+  font-family: 'Avenir Next', 'Segoe UI', sans-serif;
+  font-size: clamp(3.1rem, 8vw, 6.6rem);
+  letter-spacing: -0.065em;
+  line-height: 0.93;
+  margin: 0;
+  max-width: 850px;
+}
+
+.hero__lede {
+  color: #d6e6df;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  line-height: 1.6;
+  margin: 1.8rem 0;
+  max-width: 650px;
+}
+
+.hero__location {
+  align-items: center;
+  color: #d6e6df;
+  display: flex;
+  font-size: 0.91rem;
+  gap: 0.7rem;
+}
+
+.hero__location svg {
+  color: var(--yellow);
+}
+
+.hero__location span {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.hero__location strong {
+  color: white;
+}
+
+.today-card {
+  align-items: center;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 230px;
+  padding: 1.5rem 2rem;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.today-card p {
+  color: #d6e6df;
+  font-size: 0.84rem;
+  margin: 0;
+}
+
+.today-card strong {
+  color: var(--yellow);
+  font-family: 'Avenir Next', 'Segoe UI', sans-serif;
+  font-size: 5rem;
+  letter-spacing: -0.08em;
+  line-height: 1;
+  margin-top: 1.1rem;
+}
+
+.today-card > span {
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.today-card small {
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.17);
+  color: #d6e6df;
+  display: flex;
+  font-size: 0.72rem;
+  gap: 0.35rem;
+  margin-top: 1.4rem;
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.today-card small svg {
+  color: #9ad1b4;
+  height: 1rem;
+  width: 1rem;
+}
+
+.page-shell {
+  margin: 0 auto;
+  max-width: 1160px;
+  padding: 0 2rem;
+}
+
+.filters {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 1.4rem;
+  box-shadow: var(--shadow);
+  margin: -2rem 0 4.5rem;
+  padding: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.filters__heading,
+.filters__controls,
+.filters__options {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.filters__heading h2 {
+  font-family: 'Avenir Next', 'Segoe UI', sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.filters__heading .eyebrow {
+  font-size: 0.61rem;
+  margin-bottom: 0.35rem;
+}
+
+.button-link {
+  background: none;
+  border: 0;
+  color: var(--coral-dark);
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.4rem;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+.filters__controls {
+  border-bottom: 1px solid var(--line);
+  margin-top: 1.35rem;
+  padding-bottom: 1.2rem;
+}
+
+.search-field {
+  align-items: center;
+  background: #f4f1ea;
+  border: 1px solid transparent;
+  border-radius: 0.8rem;
+  display: flex;
+  flex: 1;
+  gap: 0.65rem;
+  max-width: 610px;
+  padding: 0 1rem;
+}
+
+.search-field:focus-within {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(19, 79, 59, 0.12);
+}
+
+.search-field svg {
+  color: var(--muted);
+  flex: 0 0 auto;
+}
+
+.search-field input {
+  background: none;
+  border: 0;
+  height: 3rem;
+  outline: 0;
+  width: 100%;
+}
+
+.search-field input::placeholder {
+  color: #79817d;
+}
+
+.sort-field {
+  align-items: center;
+  display: flex;
+  font-size: 0.82rem;
+  gap: 0.65rem;
+}
+
+.sort-field span {
+  color: var(--muted);
+}
+
+.sort-field select {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 0.65rem;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.7rem 2.2rem 0.7rem 0.8rem;
+}
+
+.filters__options {
+  align-items: start;
+  margin-top: 1.2rem;
+}
+
+.toggle {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex: 0 0 auto;
+  font-size: 0.84rem;
+  font-weight: 700;
+  gap: 0.55rem;
+  min-height: 2.25rem;
+}
+
+.toggle input,
+.filter-chip input {
+  height: 1px;
+  opacity: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.toggle__control {
+  background: #d6d7d1;
+  border-radius: 2rem;
+  height: 1.45rem;
+  position: relative;
+  transition: background 150ms ease;
+  width: 2.55rem;
+}
+
+.toggle__control::after {
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  content: '';
+  height: 1.05rem;
+  left: 0.2rem;
+  position: absolute;
+  top: 0.2rem;
+  transition: transform 150ms ease;
+  width: 1.05rem;
+}
+
+.toggle input:checked + .toggle__control {
+  background: var(--green);
+}
+
+.toggle input:checked + .toggle__control::after {
+  transform: translateX(1.1rem);
+}
+
+.toggle input:focus-visible + .toggle__control,
+.filter-chip input:focus-visible + span {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.dietary-filter {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.dietary-filter legend {
+  color: var(--muted);
+  float: left;
+  font-size: 0.78rem;
+  line-height: 2.25rem;
+  margin-right: 0.7rem;
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.filter-chip {
+  cursor: pointer;
+}
+
+.filter-chip span {
+  border: 1px solid var(--line);
+  border-radius: 2rem;
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 0.55rem 0.8rem;
+}
+
+.filter-chip input:checked + span {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+}
+
+.result-count {
+  color: var(--muted);
+  font-size: 0.72rem;
+  margin: 1rem 0 0;
+  text-align: right;
+}
+
+.section-heading {
+  align-items: end;
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.section-heading h2,
+.about h2 {
+  font-family: 'Avenir Next', 'Segoe UI', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.section-heading > p {
+  color: var(--muted);
+  font-size: 0.83rem;
+  line-height: 1.55;
+  margin: 0;
+  max-width: 380px;
+}
+
+.restaurant-list {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.restaurant-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  padding: 1.6rem;
+  transition:
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.restaurant-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.restaurant-card--unavailable {
+  background: rgba(255, 253, 248, 0.64);
+}
+
+.restaurant-card__header {
+  align-items: start;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.restaurant-card__header h2 {
+  font-family: 'Avenir Next', 'Segoe UI', sans-serif;
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  letter-spacing: -0.035em;
+  margin: 0.25rem 0 0;
+}
+
+.restaurant-card__distance {
+  align-items: center;
+  color: var(--muted);
+  display: flex;
+  font-size: 0.75rem;
+  gap: 0.35rem;
+  margin: 0;
+}
+
+.restaurant-card__distance svg {
+  color: var(--coral-dark);
+  height: 1rem;
+  width: 1rem;
+}
+
+.status-badge {
+  align-items: center;
+  border-radius: 2rem;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-size: 0.7rem;
+  font-weight: 800;
+  gap: 0.35rem;
+  padding: 0.5rem 0.7rem;
+}
+
+.status-badge svg {
+  height: 0.9rem;
+  width: 0.9rem;
+}
+
+.status-badge--positive {
+  background: var(--green-soft);
+  color: #12533c;
+}
+
+.status-badge--warning {
+  background: #fff0c8;
+  color: #76520a;
+}
+
+.status-badge--neutral {
+  background: #ecece7;
+  color: #515a55;
+}
+
+.status-badge--negative {
+  background: #fbe3df;
+  color: #8d3024;
+}
+
+.dish-list,
+.tag-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dish-list {
+  border-top: 1px solid var(--line);
+  margin-top: 1.25rem;
+}
+
+.dish {
+  padding: 1.15rem 0;
+}
+
+.dish + .dish {
+  border-top: 1px dashed var(--line);
+}
+
+.dish__topline {
+  align-items: baseline;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.dish h3 {
+  font-size: 1rem;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.dish p {
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0.3rem 0 0;
+}
+
+.dish__price {
+  color: var(--green);
+  flex: 0 0 auto;
+  font-family: 'Avenir Next', 'Segoe UI', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.65rem;
+}
+
+.tag-list li {
+  background: #eef1e9;
+  border-radius: 0.3rem;
+  color: #47564e;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.28rem 0.42rem;
+  text-transform: uppercase;
+}
+
+.menu-message {
+  background: #f2f0ea;
+  border-left: 3px solid #a2a7a4;
+  display: grid;
+  font-size: 0.82rem;
+  gap: 0.3rem;
+  line-height: 1.5;
+  margin-top: 1.3rem;
+  padding: 1rem 1.1rem;
+}
+
+.menu-message span {
+  color: var(--muted);
+}
+
+.restaurant-card__footer {
+  align-items: end;
+  border-top: 1px solid var(--line);
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  padding-top: 1.1rem;
+}
+
+.restaurant-card__meta {
+  color: var(--muted);
+  display: grid;
+  font-size: 0.72rem;
+  gap: 0.3rem;
+}
+
+.restaurant-card__meta address {
+  color: var(--ink);
+  font-style: normal;
+}
+
+.restaurant-card__links {
+  display: flex;
+  gap: 0.55rem;
+}
+
+.restaurant-card__links a {
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 0.6rem;
+  display: inline-flex;
+  font-size: 0.74rem;
+  font-weight: 700;
+  gap: 0.35rem;
+  padding: 0.65rem 0.75rem;
+  text-decoration: none;
+}
+
+.restaurant-card__links a:hover {
+  border-color: var(--green);
+}
+
+.restaurant-card__links .source-link {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+}
+
+.restaurant-card__links svg {
+  height: 0.85rem;
+  width: 0.85rem;
+}
+
+.about {
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: clamp(2rem, 8vw, 7rem);
+  grid-template-columns: 0.9fr 1.1fr;
+  margin: 6rem 0;
+  padding: 4rem 0;
+}
+
+.about > p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.loading-state,
+.empty-state {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 410px;
+  text-align: center;
+}
+
+.loading-state h2,
+.empty-state h2 {
+  font-family: 'Avenir Next', 'Segoe UI', sans-serif;
+  margin: 1.2rem 0 0.4rem;
+}
+
+.loading-state p,
+.empty-state p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.loader {
+  animation: spin 800ms linear infinite;
+  border: 3px solid #d2d8d4;
+  border-radius: 50%;
+  border-top-color: var(--green);
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.error-state {
+  align-items: center;
+  background: #fbe8e4;
+  border: 1px solid #edb9af;
+  border-radius: 1rem;
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: auto 1fr auto;
+  margin: 3.5rem 0;
+  padding: 1.4rem;
+}
+
+.error-state > span {
+  align-items: center;
+  background: #a83d2f;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  font-weight: 800;
+  height: 2.4rem;
+  justify-content: center;
+  width: 2.4rem;
+}
+
+.error-state h2 {
+  font-size: 1rem;
+  margin: 0 0 0.2rem;
+}
+
+.error-state p {
+  color: #773329;
+  font-size: 0.82rem;
+  margin: 0;
+}
+
+.button {
+  border: 0;
+  border-radius: 0.65rem;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 0.75rem 1rem;
+}
+
+.button--primary {
+  background: var(--ink);
+  color: white;
+}
+
+.button--secondary {
+  background: var(--green);
+  color: white;
+  margin-top: 1.25rem;
+}
+
+.empty-state--compact {
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px dashed #b8bbb5;
+  border-radius: 1rem;
+  min-height: 310px;
+}
+
+.empty-state > span {
+  color: var(--coral-dark);
+  font-size: 2rem;
+}
+
+.site-footer {
+  align-items: center;
+  background: var(--ink);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem max(2rem, calc((100% - 1160px) / 2));
+}
+
+.site-footer span {
+  font-family: 'Avenir Next', 'Segoe UI', sans-serif;
+  font-weight: 800;
+}
+
+.site-footer p {
+  color: #b8c2bd;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.sr-only {
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    padding: 1rem 1.2rem;
+  }
+
+  .site-header nav {
+    gap: 1rem;
+  }
+
+  .site-header nav a:last-child {
+    display: none;
+  }
+
+  .hero {
+    border-radius: 0;
+    display: block;
+    min-height: auto;
+    padding: 3.5rem 1.25rem 4.5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 17vw, 4.5rem);
+  }
+
+  .today-card {
+    align-items: start;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin-top: 2.5rem;
+    min-width: 0;
+    padding: 1.2rem;
+    text-align: left;
+  }
+
+  .today-card p,
+  .today-card small {
+    grid-column: 1 / -1;
+  }
+
+  .today-card strong {
+    font-size: 3.4rem;
+    margin: 0.7rem 0 0;
+  }
+
+  .today-card > span {
+    align-self: center;
+    margin: 0.7rem 0 0.1rem 0.8rem;
+  }
+
+  .today-card small {
+    margin-top: 0.8rem;
+  }
+
+  .page-shell {
+    padding: 0 1rem;
+  }
+
+  .filters {
+    margin-top: -1.7rem;
+    padding: 1.15rem;
+  }
+
+  .filters__controls,
+  .filters__options,
+  .section-heading,
+  .restaurant-card__footer,
+  .about {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .filters__controls {
+    display: flex;
+  }
+
+  .sort-field {
+    justify-content: space-between;
+  }
+
+  .filters__options {
+    display: flex;
+  }
+
+  .dietary-filter legend {
+    float: none;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+  }
+
+  .result-count {
+    text-align: left;
+  }
+
+  .section-heading {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .restaurant-card {
+    padding: 1.2rem;
+  }
+
+  .restaurant-card__header {
+    flex-direction: column-reverse;
+    gap: 0.8rem;
+  }
+
+  .restaurant-card__links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .restaurant-card__links a {
+    justify-content: center;
+  }
+
+  .about {
+    display: flex;
+    gap: 1.5rem;
+    margin: 4rem 0;
+    padding: 3rem 0;
+  }
+
+  .error-state {
+    align-items: start;
+    grid-template-columns: auto 1fr;
+  }
+
+  .error-state .button {
+    grid-column: 1 / -1;
+  }
+
+  .site-footer {
+    align-items: start;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.8rem 1.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .loader {
+    animation-duration: 2s;
+  }
+}
