@@ -1,0 +1,25 @@
+# syntax=docker/dockerfile:1.7
+FROM node:22.22-alpine AS build
+RUN corepack enable
+WORKDIR /workspace
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml tsconfig.base.json ./
+COPY apps/api/package.json apps/api/package.json
+COPY apps/web/package.json apps/web/package.json
+COPY apps/worker/package.json apps/worker/package.json
+COPY packages/database/package.json packages/database/package.json
+COPY packages/scraping/package.json packages/scraping/package.json
+COPY packages/shared/package.json packages/shared/package.json
+RUN pnpm install --frozen-lockfile
+COPY apps/worker apps/worker
+COPY packages/database packages/database
+COPY packages/scraping packages/scraping
+COPY packages/shared packages/shared
+RUN pnpm --filter @lunch/worker build
+RUN pnpm deploy --legacy --filter @lunch/worker --prod /release
+
+FROM node:22.22-alpine AS runtime
+ENV NODE_ENV=production
+WORKDIR /app
+COPY --from=build --chown=node:node /release/ ./
+USER node
+CMD ["node", "dist/cli.js", "schedule"]

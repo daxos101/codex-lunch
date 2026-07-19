@@ -5,7 +5,7 @@ import {
   type FetchTextClient,
   type MenuAdapter,
 } from '@lunch/scraping';
-import type { CollectionResult, Restaurant } from '@lunch/shared';
+import type { Restaurant } from '@lunch/shared';
 import { describe, expect, it } from 'vitest';
 
 import type {
