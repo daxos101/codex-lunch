@@ -15,12 +15,12 @@ alignment, conflict prevention, review, and completion criteria.
 
 ## Workstreams
 
-| Workstream                   | Ownership                                                        | Status       | Handoff                                                                      |
-| ---------------------------- | ---------------------------------------------------------------- | ------------ | ---------------------------------------------------------------------------- |
-| Coordination and integration | root files, shared contracts, API, database, CI, final review    | Verification | API/database/operations/deployment integrated; final CI review pending       |
-| Restaurant discovery         | discovery evidence, candidates, sources, geographic verification | Complete     | `ff30cbd`: 3 km net, 2 km Haversine gate, 21 reviewed candidates             |
-| Collection and extraction    | scraping package, adapters, fixtures, worker behavior            | Complete     | `d7c1665`: bounded HTTP, freshness, two live adapters, scheduler/CLI         |
-| Dashboard                    | web application, accessible interaction, critical UI flows       | Complete     | `a20a1d5`: responsive source-transparent UI and six deterministic flow tests |
+| Workstream                   | Ownership                                                        | Status   | Handoff                                                                      |
+| ---------------------------- | ---------------------------------------------------------------- | -------- | ---------------------------------------------------------------------------- |
+| Coordination and integration | root files, shared contracts, API, database, CI, final review    | Complete | Clean-clone verification and mission/definition-of-done review recorded      |
+| Restaurant discovery         | discovery evidence, candidates, sources, geographic verification | Complete | `ff30cbd`: 3 km net, 2 km Haversine gate, 21 reviewed candidates             |
+| Collection and extraction    | scraping package, adapters, fixtures, worker behavior            | Complete | `d7c1665`: bounded HTTP, freshness, two live adapters, scheduler/CLI         |
+| Dashboard                    | web application, accessible interaction, critical UI flows       | Complete | `a20a1d5`: responsive source-transparent UI and six deterministic flow tests |
 
 ## Decisions
 
@@ -42,14 +42,12 @@ alignment, conflict prevention, review, and completion criteria.
 - [x] Reproducible restaurant inventory verified.
 - [x] End-to-end collection and dashboard vertical slice.
 - [x] Reliability, operations, fixtures, and CI configuration.
-- [ ] Clean-checkout verification.
-- [ ] Coordinator definition-of-done review.
-- [ ] Coherent commits pushed to GitHub.
+- [x] Clean-checkout verification.
+- [x] Coordinator definition-of-done review.
+- [x] Coherent commits pushed to GitHub.
 
 ## Unresolved issues
 
-- Verify PostgreSQL integration tests on GitHub Actions because this local
-  environment cannot access its Docker daemon.
 - Confirm the Render Blueprint after the first real provider sync; this build
   does not create production resources without operator authorization.
 - Nygammalt and WKB have strong official weekly sources but still require
