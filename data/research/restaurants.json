@@ -106,10 +106,7 @@
       "adapterId": "landet-daily-html",
       "researchStatus": "adapter_ready",
       "observedAtResearch": "The official source explicitly said lunch was closed and would return 24 August. This is a verified closed state, not a missing-menu failure.",
-      "evidenceUrls": [
-        "https://www.landet.nu/",
-        "https://www.landet.nu/lunch/"
-      ]
+      "evidenceUrls": ["https://www.landet.nu/", "https://www.landet.nu/lunch/"]
     },
     {
       "id": "krubb-telefonplan",
@@ -138,9 +135,7 @@
       "adapterId": null,
       "researchStatus": "manual_review",
       "observedAtResearch": "The source is authoritative for dishes and prices but cannot confirm that a changing menu is current today. Do not label it confirmed-current without a separate publication signal.",
-      "evidenceUrls": [
-        "https://krubbburgers.se/"
-      ]
+      "evidenceUrls": ["https://krubbburgers.se/"]
     },
     {
       "id": "tokai-sushi-telefonplan",
@@ -202,9 +197,7 @@
       "adapterId": null,
       "researchStatus": "manual_review",
       "observedAtResearch": "The official site stated closure from 4 July through 8 August. Closure detection is feasible, but dish OCR would not establish today's menu reliably.",
-      "evidenceUrls": [
-        "https://thaiwokorkide.nu/"
-      ]
+      "evidenceUrls": ["https://thaiwokorkide.nu/"]
     },
     {
       "id": "masahiro",
@@ -233,9 +226,7 @@
       "adapterId": null,
       "researchStatus": "manual_review",
       "observedAtResearch": "The previously indexed source could not be retrieved because its hostname did not resolve. It must not be automated or treated as current unless the official source returns.",
-      "evidenceUrls": [
-        "https://www.sushibarmasahiro.com/recipe/lunch"
-      ]
+      "evidenceUrls": ["https://www.sushibarmasahiro.com/recipe/lunch"]
     },
     {
       "id": "nygammalt",
@@ -296,9 +287,7 @@
       "adapterId": null,
       "researchStatus": "adapter_candidate",
       "observedAtResearch": "The stable weekday rotation is useful, but absence of a date means the menu should not be marked confirmed-current solely because retrieval succeeded.",
-      "evidenceUrls": [
-        "https://indianlotus.se/"
-      ]
+      "evidenceUrls": ["https://indianlotus.se/"]
     },
     {
       "id": "the-meeting",
@@ -327,9 +316,7 @@
       "adapterId": null,
       "researchStatus": "manual_review",
       "observedAtResearch": "The public source verifies that lunch exists, but not what the lunch buffet contains today.",
-      "evidenceUrls": [
-        "https://themeetingrestaurant.se/"
-      ]
+      "evidenceUrls": ["https://themeetingrestaurant.se/"]
     },
     {
       "id": "pita-i-parken",
@@ -454,9 +441,7 @@
       "adapterId": null,
       "researchStatus": "manual_review",
       "observedAtResearch": "The profile looked actively maintained and carried current closure information, but ownership of the publishing channel was not independently verified. Confirm with the restaurant before treating it as authoritative.",
-      "evidenceUrls": [
-        "https://spiskroken.kvartersmenyn.se/"
-      ]
+      "evidenceUrls": ["https://spiskroken.kvartersmenyn.se/"]
     },
     {
       "id": "wkb-vastberga",
@@ -485,10 +470,7 @@
       "adapterId": null,
       "researchStatus": "adapter_ready",
       "observedAtResearch": "The source stated vacation closure during weeks 28-31. That is a reliable closed status for Stockholm week 30.",
-      "evidenceUrls": [
-        "https://wkb.se/?page_id=83",
-        "https://wkb.se/?page_id=93"
-      ]
+      "evidenceUrls": ["https://wkb.se/?page_id=83", "https://wkb.se/?page_id=93"]
     },
     {
       "id": "the-swan",
@@ -517,9 +499,7 @@
       "adapterId": null,
       "researchStatus": "manual_review",
       "observedAtResearch": "The stale OSM website tag pointed to theswan.nu, which did not resolve; the current official site is theswan.se. No confirmed daily lunch source was located.",
-      "evidenceUrls": [
-        "https://www.theswan.se/"
-      ]
+      "evidenceUrls": ["https://www.theswan.se/"]
     },
     {
       "id": "restaurant-kransen",
@@ -548,9 +528,7 @@
       "adapterId": null,
       "researchStatus": "unsupported",
       "observedAtResearch": "The mapped and independently indexed weekday opening time was 15:00, so it should not be promoted as a weekday lunch source without newer official evidence. Weekend daytime service is a separate use case.",
-      "evidenceUrls": [
-        "https://www.restaurantkransen.se/"
-      ]
+      "evidenceUrls": ["https://www.restaurantkransen.se/"]
     },
     {
       "id": "vintervikens-tradgardskafe",
@@ -579,10 +557,7 @@
       "adapterId": null,
       "researchStatus": "manual_review",
       "observedAtResearch": "Lunch availability is verified, but no stable date-bearing daily dish source was found. Event menus must not be mistaken for ordinary lunch.",
-      "evidenceUrls": [
-        "https://vinterviken.com/",
-        "https://vinterviken.com/kafe/"
-      ]
+      "evidenceUrls": ["https://vinterviken.com/", "https://vinterviken.com/kafe/"]
     },
     {
       "id": "vastertorps-hjarta",
@@ -611,9 +586,7 @@
       "adapterId": null,
       "researchStatus": "adapter_candidate",
       "observedAtResearch": "The source displayed week 26 while Stockholm was in week 30. The extractable content is demonstrably stale and must never be shown as today's confirmed lunch.",
-      "evidenceUrls": [
-        "https://vastertorpshjarta.se/"
-      ]
+      "evidenceUrls": ["https://vastertorpshjarta.se/"]
     },
     {
       "id": "bastard-burgers-liljeholmen",
@@ -668,9 +641,7 @@
       "adapterId": null,
       "researchStatus": "outside_radius",
       "observedAtResearch": "Excluded by coordinate distance even though it is only 0.9 m beyond the formal boundary at source precision. This close result should be rechecked whenever source coordinates change.",
-      "evidenceUrls": [
-        "https://www.openstreetmap.org/node/12455835880"
-      ]
+      "evidenceUrls": ["https://www.openstreetmap.org/node/12455835880"]
     },
     {
       "id": "thai-rung-liljeholmen-boundary",

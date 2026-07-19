@@ -80,10 +80,10 @@ These are useful acceptance cases for adapters and fixtures: `restaurant_closed`
 
 The first operational pair is:
 
-| Restaurant | Distance | Official source | Adapter ID | Why first |
-| --- | ---: | --- | --- | --- |
-| Addfood / Tellus Restaurang | 105.7 m | [weekly lunch HTML](https://www.addfood.se/home/lunchmeny/) | `addfood-weekly-html` | Week number, weekday sections, allergens, and explicit closures |
-| Restaurang Landet | 112.6 m | [daily/weekly lunch HTML](https://www.landet.nu/lunch/) | `landet-daily-html` | Today's weekday section, full week, and explicit closure state |
+| Restaurant                  | Distance | Official source                                             | Adapter ID            | Why first                                                       |
+| --------------------------- | -------: | ----------------------------------------------------------- | --------------------- | --------------------------------------------------------------- |
+| Addfood / Tellus Restaurang |  105.7 m | [weekly lunch HTML](https://www.addfood.se/home/lunchmeny/) | `addfood-weekly-html` | Week number, weekday sections, allergens, and explicit closures |
+| Restaurang Landet           |  112.6 m | [daily/weekly lunch HTML](https://www.landet.nu/lunch/)     | `landet-daily-html`   | Today's weekday section, full week, and explicit closure state  |
 
 Both are extremely close, authoritative, publicly accessible, and provide complementary freshness cases. Nygammalt and WKB Västberga are the next strongest adapter candidates. They have stable official weekly HTML, but their current observed pages also prove why week validation is mandatory.
 
@@ -93,19 +93,19 @@ Other useful official sources include [Indian Lotus](https://indianlotus.se/) fo
 
 The JSON is deliberately candid about sources that are nearby but not safe to automate:
 
-| Venue | Distance | Current disposition | Reason |
-| --- | ---: | --- | --- |
-| Krubb Telefonplan | 107.4 m | Manual review | Official menu is static and undated |
-| Thai Wok Orkidé | 333.1 m | Manual review | Dishes are image-based and not date-specific; HTML is useful for closure only |
-| Sushibar Masahiro | 487.8 m | Manual review | Previously indexed lunch source hostname did not resolve during verification |
-| The Meeting | 653.0 m | Manual review | Official site verifies lunch-buffet hours, not today's buffet dishes |
-| Café Elektra | 1,000.9 m | Manual review | Official site verifies lunch service; dish list was found only on an unverified third party |
-| Spiskroken | 1,068.5 m | Manual review pending publisher confirmation | Dedicated Kvartersmenyn profile looks maintained, but channel ownership was not independently verified |
-| The Swan | 1,156.4 m | Manual review | Current official site found, but no date-bearing daily lunch publication |
-| Restaurant Kransen | 1,212.2 m | Unsupported for weekday lunch | Available official/general evidence does not establish weekday lunch; mapped weekday opening begins at 15:00 |
-| Vintervikens Trädgårdskafé | 1,357.7 m | Manual review | Official site confirms daily lunch, but specific food varies across event/social posts without a stable daily source |
-| Caffè Nero Liljeholmen | 2,000.9 m | Excluded | Outside the strict geographic boundary |
-| Thai Rung Liljeholmen | 2,017.1 m | Excluded | Outside the strict geographic boundary despite a valid official site |
+| Venue                      |  Distance | Current disposition                          | Reason                                                                                                               |
+| -------------------------- | --------: | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Krubb Telefonplan          |   107.4 m | Manual review                                | Official menu is static and undated                                                                                  |
+| Thai Wok Orkidé            |   333.1 m | Manual review                                | Dishes are image-based and not date-specific; HTML is useful for closure only                                        |
+| Sushibar Masahiro          |   487.8 m | Manual review                                | Previously indexed lunch source hostname did not resolve during verification                                         |
+| The Meeting                |   653.0 m | Manual review                                | Official site verifies lunch-buffet hours, not today's buffet dishes                                                 |
+| Café Elektra               | 1,000.9 m | Manual review                                | Official site verifies lunch service; dish list was found only on an unverified third party                          |
+| Spiskroken                 | 1,068.5 m | Manual review pending publisher confirmation | Dedicated Kvartersmenyn profile looks maintained, but channel ownership was not independently verified               |
+| The Swan                   | 1,156.4 m | Manual review                                | Current official site found, but no date-bearing daily lunch publication                                             |
+| Restaurant Kransen         | 1,212.2 m | Unsupported for weekday lunch                | Available official/general evidence does not establish weekday lunch; mapped weekday opening begins at 15:00         |
+| Vintervikens Trädgårdskafé | 1,357.7 m | Manual review                                | Official site confirms daily lunch, but specific food varies across event/social posts without a stable daily source |
+| Caffè Nero Liljeholmen     | 2,000.9 m | Excluded                                     | Outside the strict geographic boundary                                                                               |
+| Thai Rung Liljeholmen      | 2,017.1 m | Excluded                                     | Outside the strict geographic boundary despite a valid official site                                                 |
 
 Browser automation and OCR are not justified for these sources at present: neither would create missing date evidence, and OCR of a menu image could turn old content into a falsely current result. A restaurant can be added later when it exposes a reliable public source or confirms an official publishing channel.
 
