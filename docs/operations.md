@@ -15,7 +15,7 @@ At 08:15 Stockholm time the long-running worker:
    source host;
 5. writes one retained `collection_attempts` row per restaurant;
 6. upserts the restaurant/date `menu_snapshots` row transactionally;
-7. updates per-restaurant last-attempt, last-confirmed-success, and current
+7. updates per-restaurant last-attempt, last-successful-retrieval, and current
    status; and
 8. persists a completed, partial-failure, or failed run summary and releases the
    lock.

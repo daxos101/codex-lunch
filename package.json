@@ -15,6 +15,7 @@
     "format": "prettier --check .",
     "format:fix": "prettier --write .",
     "lint": "eslint . --max-warnings=0",
+    "preview:live": "pnpm --filter @lunch/worker exec tsx src/live-preview.ts",
     "restaurants:build": "node scripts/build-restaurant-seed.mjs",
     "test": "pnpm -r --if-present test",
     "test:coverage": "pnpm -r --if-present test:coverage",

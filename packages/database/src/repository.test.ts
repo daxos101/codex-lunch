@@ -130,10 +130,12 @@ integration('PostgreSQL repository', () => {
     });
 
     const dashboard = await repository.getDashboard('2026-07-19');
+    const sourceHealth = await repository.latestStatuses();
 
     expect(dashboard.restaurants[0]).toMatchObject({
       status: 'possibly_stale',
       dishes: [],
     });
+    expect(sourceHealth[0]?.lastSuccess).toBe('2026-07-19T06:15:00.000Z');
   });
 });

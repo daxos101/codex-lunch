@@ -252,7 +252,12 @@ export class LunchRepository {
         `UPDATE restaurants SET
            last_retrieval_attempt = $2,
            last_successful_retrieval = CASE
-             WHEN $3 = 'confirmed_today' THEN $2
+             WHEN $3 IN (
+               'confirmed_today',
+               'possibly_stale',
+               'not_published',
+               'closed'
+             ) THEN $2
              ELSE last_successful_retrieval
            END,
            current_menu_status = $3,

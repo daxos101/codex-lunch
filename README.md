@@ -108,6 +108,18 @@ Fastify service at `http://localhost:3001`. Run one collection separately:
 pnpm worker collect all
 ```
 
+For a database-free local preview that performs real public-source retrieval
+and keeps results in memory, run these in separate terminals:
+
+```bash
+pnpm preview:live
+pnpm --filter @lunch/web dev --host 0.0.0.0
+```
+
+Open `http://localhost:5173`. This uses the production adapters, timeouts,
+freshness classification, and source URLs. It does not persist results, and
+restaurants without registered adapters remain manual review.
+
 ## Environment variables
 
 | Variable               | Required            | Default                 | Purpose                                          |
