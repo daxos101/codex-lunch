@@ -1,0 +1,708 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-07-19T23:20:00Z",
+  "stockholmDateAtResearch": "2026-07-20",
+  "target": {
+    "name": "Places Telefonplan - Coworking",
+    "address": "Tellusgången 2, 126 26 Hägersten, Sweden",
+    "coordinates": {
+      "latitude": 59.29927,
+      "longitude": 17.994293,
+      "crs": "EPSG:4326"
+    },
+    "addressEvidenceUrl": "https://www.joinplaces.co/en/kontor/telefonplan",
+    "coordinateEvidenceUrl": "https://www.hitta.se/stockholms%2Bl%C3%A4n/h%C3%A4gersten/tellusg%C3%A5ngen%2B2/omr%C3%A5de/1011617436"
+  },
+  "geographicPolicy": {
+    "discoveryRadiusMeters": 3000,
+    "productionEligibilityRadiusMeters": 2000,
+    "distanceMethod": "Haversine great-circle distance",
+    "earthRadiusMeters": 6371008.8,
+    "boundaryRule": "eligible when distanceMeters <= 2000",
+    "distancePrecision": "Coordinates are evaluated at full source precision; distanceMeters is rounded to 0.1 m for storage."
+  },
+  "discoverySnapshot": {
+    "provider": "OpenStreetMap via Overpass API",
+    "providerLicense": "ODbL 1.0",
+    "endpoint": "https://overpass-api.de/api/interpreter",
+    "osmDataTimestampUtc": "2026-07-19T23:06:57Z",
+    "query": "[out:json][timeout:45];nwr[amenity~\"^(restaurant|cafe|fast_food|food_court)$\"](around:3000,59.299270,17.994293);out center tags;",
+    "elementsReturned": 302,
+    "centroidsWithinDiscoveryRadius": 300,
+    "namedCentroidsWithinDiscoveryRadius": 294,
+    "namedCentroidsWithinProductionRadius": 130,
+    "namedCentroidsBetweenTwoAndThreeKm": 164,
+    "unnamedCentroidsWithinProductionRadius": 4,
+    "notes": [
+      "The counts describe the reproducible discovery net, not a claim that every mapped cafe or fast-food venue publishes a daily lunch.",
+      "Ways and relations are classified using the center returned by Overpass. A future production refresh should retain source geometry and review features close to 2000 m.",
+      "reviewedCandidates is the source-reviewed onboarding shortlist, not the entire Overpass result."
+    ]
+  },
+  "statusVocabulary": {
+    "adapter_ready": "Official source has a stable shape and enough date or closure context for an adapter.",
+    "adapter_candidate": "Public source is useful, but freshness confirmation needs extra safeguards.",
+    "manual_review": "Automation cannot safely confirm today's menu from the reviewed public source.",
+    "unsupported": "No reliable dish-level lunch source was found or the venue does not currently offer the relevant lunch.",
+    "outside_radius": "The venue was found in the 3 km discovery net but its Haversine distance exceeds 2 km."
+  },
+  "reviewedCandidates": [
+    {
+      "id": "addfood-telefonplan",
+      "name": "Addfood / Tellus Restaurang",
+      "address": "Dialoggatan 11, 126 37 Hägersten",
+      "coordinates": {
+        "latitude": 59.2991966,
+        "longitude": 17.9924373
+      },
+      "distanceMeters": 105.7,
+      "eligible": true,
+      "discovery": {
+        "osmType": "node",
+        "osmId": 804687569,
+        "osmUrl": "https://www.openstreetmap.org/node/804687569",
+        "mappedName": "Tellus Restaurang"
+      },
+      "websiteUrl": "https://www.addfood.se/home/",
+      "menuSource": {
+        "url": "https://www.addfood.se/home/lunchmeny/",
+        "category": "official_html_weekly",
+        "authority": "official",
+        "automationFeasibility": "high",
+        "observedShape": "Week-number heading, Swedish weekday sections, prices/allergen markers, and explicit closure text."
+      },
+      "adapterId": "addfood-weekly-html",
+      "researchStatus": "adapter_ready",
+      "observedAtResearch": "The page advertised week 33 while also stating summer closure during weeks 29-32; an adapter must prefer the closure for the current Stockholm week and must not expose the future menu early.",
+      "evidenceUrls": [
+        "https://www.addfood.se/home/",
+        "https://www.addfood.se/home/lunchmeny/"
+      ]
+    },
+    {
+      "id": "landet-telefonplan",
+      "name": "Restaurang Landet",
+      "address": "LM Ericssons väg 27, 126 37 Hägersten",
+      "coordinates": {
+        "latitude": 59.2991679,
+        "longitude": 17.9962667
+      },
+      "distanceMeters": 112.6,
+      "eligible": true,
+      "discovery": {
+        "osmType": "node",
+        "osmId": 605392927,
+        "osmUrl": "https://www.openstreetmap.org/node/605392927",
+        "mappedName": "Landet"
+      },
+      "websiteUrl": "https://www.landet.nu/",
+      "menuSource": {
+        "url": "https://www.landet.nu/lunch/",
+        "category": "official_html_daily_and_weekly",
+        "authority": "official",
+        "automationFeasibility": "high",
+        "observedShape": "Today's Swedish weekday block plus a full-week section and explicit closure messaging."
+      },
+      "adapterId": "landet-daily-html",
+      "researchStatus": "adapter_ready",
+      "observedAtResearch": "The official source explicitly said lunch was closed and would return 24 August. This is a verified closed state, not a missing-menu failure.",
+      "evidenceUrls": [
+        "https://www.landet.nu/",
+        "https://www.landet.nu/lunch/"
+      ]
+    },
+    {
+      "id": "krubb-telefonplan",
+      "name": "Krubb Telefonplan",
+      "address": "Telefonvägen 22A, 126 26 Hägersten",
+      "coordinates": {
+        "latitude": 59.298455,
+        "longitude": 17.9953077
+      },
+      "distanceMeters": 107.4,
+      "eligible": true,
+      "discovery": {
+        "osmType": "node",
+        "osmId": 4165281189,
+        "osmUrl": "https://www.openstreetmap.org/node/4165281189",
+        "mappedName": "Krubb"
+      },
+      "websiteUrl": "https://krubbburgers.se/",
+      "menuSource": {
+        "url": "https://krubbburgers.se/",
+        "category": "official_html_static_menu",
+        "authority": "official",
+        "automationFeasibility": "medium",
+        "observedShape": "Location details and a static all-day menu; no explicit date or current lunch-day marker."
+      },
+      "adapterId": null,
+      "researchStatus": "manual_review",
+      "observedAtResearch": "The source is authoritative for dishes and prices but cannot confirm that a changing menu is current today. Do not label it confirmed-current without a separate publication signal.",
+      "evidenceUrls": [
+        "https://krubbburgers.se/"
+      ]
+    },
+    {
+      "id": "tokai-sushi-telefonplan",
+      "name": "Tokai Sushi Telefonplan",
+      "address": "Tellusgången 27, 126 37 Hägersten",
+      "coordinates": {
+        "latitude": 59.2987356,
+        "longitude": 17.990757
+      },
+      "distanceMeters": 209.4,
+      "eligible": true,
+      "discovery": {
+        "osmType": "node",
+        "osmId": 3051021387,
+        "osmUrl": "https://www.openstreetmap.org/node/3051021387",
+        "mappedName": "Tokai sushi"
+      },
+      "websiteUrl": "https://www.tokaisushi.se/",
+      "menuSource": {
+        "url": "https://www.tokaisushi.se/meny",
+        "category": "official_client_rendered_menu",
+        "authority": "official",
+        "automationFeasibility": "medium",
+        "observedShape": "Client-rendered menu with a lunch-mode toggle and a Telefonplan location page; no date-bearing daily publication was found."
+      },
+      "adapterId": null,
+      "researchStatus": "adapter_candidate",
+      "observedAtResearch": "A static lunch offer can be extracted, but it should remain unconfirmed unless the source supplies a current-day or current-week signal.",
+      "evidenceUrls": [
+        "https://www.tokaisushi.se/",
+        "https://www.tokaisushi.se/meny",
+        "https://www.tokaisushi.se/restauranger/telefonplan"
+      ]
+    },
+    {
+      "id": "thai-wok-orkide",
+      "name": "Thai Wok Orkidé",
+      "address": "Bäckvägen 80, 126 47 Hägersten",
+      "coordinates": {
+        "latitude": 59.3022428,
+        "longitude": 17.9935758
+      },
+      "distanceMeters": 333.1,
+      "eligible": true,
+      "discovery": {
+        "osmType": "node",
+        "osmId": 10942959993,
+        "osmUrl": "https://www.openstreetmap.org/node/10942959993",
+        "mappedName": "Thai Wok Orkidé"
+      },
+      "websiteUrl": "https://thaiwokorkide.nu/",
+      "menuSource": {
+        "url": "https://thaiwokorkide.nu/",
+        "category": "official_html_with_menu_images",
+        "authority": "official",
+        "automationFeasibility": "low",
+        "observedShape": "Closure text is HTML, while dishes are image-based and not identified as a dated lunch menu."
+      },
+      "adapterId": null,
+      "researchStatus": "manual_review",
+      "observedAtResearch": "The official site stated closure from 4 July through 8 August. Closure detection is feasible, but dish OCR would not establish today's menu reliably.",
+      "evidenceUrls": [
+        "https://thaiwokorkide.nu/"
+      ]
+    },
+    {
+      "id": "masahiro",
+      "name": "Sushibar Masahiro",
+      "address": "Tellusborgsvägen 73A, 126 29 Hägersten",
+      "coordinates": {
+        "latitude": 59.2982973,
+        "longitude": 18.0026717
+      },
+      "distanceMeters": 487.8,
+      "eligible": true,
+      "discovery": {
+        "osmType": "node",
+        "osmId": 6383727926,
+        "osmUrl": "https://www.openstreetmap.org/node/6383727926",
+        "mappedName": "Masahiro"
+      },
+      "websiteUrl": "https://www.sushibarmasahiro.com/",
+      "menuSource": {
+        "url": "https://www.sushibarmasahiro.com/recipe/lunch",
+        "category": "previously_indexed_official_lunch",
+        "authority": "unavailable_unverified_current",
+        "automationFeasibility": "low",
+        "observedShape": "Search indexing showed structured lunch dishes and prices, but the source hostname did not resolve during direct verification."
+      },
+      "adapterId": null,
+      "researchStatus": "manual_review",
+      "observedAtResearch": "The previously indexed source could not be retrieved because its hostname did not resolve. It must not be automated or treated as current unless the official source returns.",
+      "evidenceUrls": [
+        "https://www.sushibarmasahiro.com/recipe/lunch"
+      ]
+    },
+    {
+      "id": "nygammalt",
+      "name": "Restaurang Nygammalt",
+      "address": "Midsommarvägen 80, 126 35 Hägersten",
+      "coordinates": {
+        "latitude": 59.2998782,
+        "longitude": 18.0046563
+      },
+      "distanceMeters": 592.2,
+      "eligible": true,
+      "discovery": {
+        "osmType": "node",
+        "osmId": 1408221915,
+        "osmUrl": "https://www.openstreetmap.org/node/1408221915",
+        "mappedName": "Nygammalt"
+      },
+      "websiteUrl": "https://www.restaurangnygammalt.se/",
+      "menuSource": {
+        "url": "https://www.restaurangnygammalt.se/index.php/lunchmeny/",
+        "category": "official_html_weekly",
+        "authority": "official",
+        "automationFeasibility": "high",
+        "observedShape": "ISO-like week number, Swedish weekday sections, dish descriptions, prices, and always-available dishes."
+      },
+      "adapterId": null,
+      "researchStatus": "adapter_ready",
+      "observedAtResearch": "The source still displayed week 29 when Stockholm had entered week 30. A correct adapter should classify that publication as stale, not confirmed.",
+      "evidenceUrls": [
+        "https://www.restaurangnygammalt.se/",
+        "https://www.restaurangnygammalt.se/index.php/lunchmeny/"
+      ]
+    },
+    {
+      "id": "indian-lotus",
+      "name": "Indian Lotus",
+      "address": "Riksdalervägen 9, 129 32 Hägersten",
+      "coordinates": {
+        "latitude": 59.2974935,
+        "longitude": 17.9843719
+      },
+      "distanceMeters": 596.9,
+      "eligible": true,
+      "discovery": {
+        "osmType": "node",
+        "osmId": 687035015,
+        "osmUrl": "https://www.openstreetmap.org/node/687035015",
+        "mappedName": "Indian Lotus"
+      },
+      "websiteUrl": "https://indianlotus.se/",
+      "menuSource": {
+        "url": "https://indianlotus.se/",
+        "category": "official_html_weekday_rotation",
+        "authority": "official",
+        "automationFeasibility": "medium",
+        "observedShape": "Swedish weekday lunch sections, dishes, prices, dietary cues, and allergens, but no week/date."
+      },
+      "adapterId": null,
+      "researchStatus": "adapter_candidate",
+      "observedAtResearch": "The stable weekday rotation is useful, but absence of a date means the menu should not be marked confirmed-current solely because retrieval succeeded.",
+      "evidenceUrls": [
+        "https://indianlotus.se/"
+      ]
+    },
+    {
+      "id": "the-meeting",
+      "name": "The Meeting Restaurant",
+      "address": "Hägerstensvägen 175, 126 53 Hägersten",
+      "coordinates": {
+        "latitude": 59.3050438,
+        "longitude": 17.9921902
+      },
+      "distanceMeters": 653,
+      "eligible": true,
+      "discovery": {
+        "osmType": "node",
+        "osmId": 2962651036,
+        "osmUrl": "https://www.openstreetmap.org/node/2962651036",
+        "mappedName": "The meeting bar & restaurant"
+      },
+      "websiteUrl": "https://themeetingrestaurant.se/",
+      "menuSource": {
+        "url": "https://themeetingrestaurant.se/",
+        "category": "official_client_rendered_general_menu",
+        "authority": "official",
+        "automationFeasibility": "low",
+        "observedShape": "Official page confirms weekday lunch-buffet hours; dish data is a client-side Firestore-fed general menu without a date-bearing lunch section."
+      },
+      "adapterId": null,
+      "researchStatus": "manual_review",
+      "observedAtResearch": "The public source verifies that lunch exists, but not what the lunch buffet contains today.",
+      "evidenceUrls": [
+        "https://themeetingrestaurant.se/"
+      ]
+    },
+    {
+      "id": "pita-i-parken",
+      "name": "Pita i Parken Midsommarkransen",
+      "address": "Svandammsvägen 41, 126 35 Hägersten",
+      "coordinates": {
+        "latitude": 59.301094,
+        "longitude": 18.0069063
+      },
+      "distanceMeters": 744.2,
+      "eligible": true,
+      "discovery": {
+        "osmType": "node",
+        "osmId": 534138281,
+        "osmUrl": "https://www.openstreetmap.org/node/534138281",
+        "mappedName": "Pita i parken"
+      },
+      "websiteUrl": "https://www.pitaiparken.se/",
+      "menuSource": {
+        "url": "https://www.pitaiparken.se/",
+        "category": "official_html_static_menu",
+        "authority": "official",
+        "automationFeasibility": "medium",
+        "observedShape": "Static food menu, current seasonal opening-hours notice, and links to official ordering."
+      },
+      "adapterId": null,
+      "researchStatus": "adapter_candidate",
+      "observedAtResearch": "The page had summer-specific opening hours, but did not publish a dated daily lunch. Treat menu dishes as a general lunch option, never as a confirmed daily special.",
+      "evidenceUrls": [
+        "https://www.pitaiparken.se/",
+        "https://qopla.com/restaurant/pita-i-parken-/qx1M2qy7Mk/order"
+      ]
+    },
+    {
+      "id": "tellus-pizza",
+      "name": "Tellus Pizza",
+      "address": "Vattenledningsvägen 57, 126 33 Hägersten",
+      "coordinates": {
+        "latitude": 59.3020127,
+        "longitude": 18.0082047
+      },
+      "distanceMeters": 846.6,
+      "eligible": true,
+      "discovery": {
+        "osmType": "node",
+        "osmId": 1408221902,
+        "osmUrl": "https://www.openstreetmap.org/node/1408221902",
+        "mappedName": "Tellus Pizza"
+      },
+      "websiteUrl": "https://www.telluspizza.com/",
+      "menuSource": {
+        "url": "https://www.telluspizza.com/menu/",
+        "category": "official_html_static_menu",
+        "authority": "official",
+        "automationFeasibility": "medium",
+        "observedShape": "Structured all-day dishes, prices, vegan section, and opening hours; no dated lunch publication."
+      },
+      "adapterId": null,
+      "researchStatus": "adapter_candidate",
+      "observedAtResearch": "Suitable as a general daytime menu only if the product models that separately from today's confirmed lunch specials.",
+      "evidenceUrls": [
+        "https://www.telluspizza.com/menu/",
+        "https://www.telluspizza.com/contact/"
+      ]
+    },
+    {
+      "id": "cafe-elektra",
+      "name": "Café Elektra",
+      "address": "Elektravägen 33, 126 30 Hägersten",
+      "coordinates": {
+        "latitude": 59.2943422,
+        "longitude": 18.0090461
+      },
+      "distanceMeters": 1000.9,
+      "eligible": true,
+      "discovery": {
+        "osmType": "node",
+        "osmId": 2343005516,
+        "osmUrl": "https://www.openstreetmap.org/node/2343005516",
+        "mappedName": "Cafe Elektra"
+      },
+      "websiteUrl": "https://elektracafe.n.nu/",
+      "menuSource": {
+        "url": "https://www.lunchsidan.se/plats/parksidan/2684420",
+        "category": "third_party_menu_page",
+        "authority": "third_party_unverified",
+        "automationFeasibility": "low",
+        "observedShape": "The official site verifies the restaurant and lunch service; a third party publishes weekday dishes, but publisher authority and date freshness are unclear."
+      },
+      "adapterId": null,
+      "researchStatus": "manual_review",
+      "observedAtResearch": "Do not automate from the third-party page until the restaurant confirms it as its publishing channel.",
+      "evidenceUrls": [
+        "https://elektracafe.n.nu/",
+        "https://www.lunchsidan.se/plats/parksidan/2684420"
+      ]
+    },
+    {
+      "id": "spiskroken",
+      "name": "Restaurang Spiskroken",
+      "address": "Västbergavägen 25, 126 30 Hägersten",
+      "coordinates": {
+        "latitude": 59.2928504,
+        "longitude": 18.0082976
+      },
+      "distanceMeters": 1068.5,
+      "eligible": true,
+      "discovery": {
+        "osmType": "node",
+        "osmId": 2793415773,
+        "osmUrl": "https://www.openstreetmap.org/node/2793415773",
+        "mappedName": "Spiskroken"
+      },
+      "websiteUrl": "https://spiskroken.kvartersmenyn.se/",
+      "menuSource": {
+        "url": "https://spiskroken.kvartersmenyn.se/",
+        "category": "restaurant_profile_on_menu_publisher",
+        "authority": "third_party_unverified",
+        "automationFeasibility": "medium",
+        "observedShape": "Current week heading, Swedish weekdays, dishes, price, and explicit closure text on a dedicated restaurant profile."
+      },
+      "adapterId": null,
+      "researchStatus": "manual_review",
+      "observedAtResearch": "The profile looked actively maintained and carried current closure information, but ownership of the publishing channel was not independently verified. Confirm with the restaurant before treating it as authoritative.",
+      "evidenceUrls": [
+        "https://spiskroken.kvartersmenyn.se/"
+      ]
+    },
+    {
+      "id": "wkb-vastberga",
+      "name": "WKB Västberga",
+      "address": "Västberga Allé 36A, 2 tr, 126 30 Hägersten",
+      "coordinates": {
+        "latitude": 59.293817,
+        "longitude": 18.0111796
+      },
+      "distanceMeters": 1134.4,
+      "eligible": true,
+      "discovery": {
+        "osmType": "node",
+        "osmId": 2921893021,
+        "osmUrl": "https://www.openstreetmap.org/node/2921893021",
+        "mappedName": "WKB Västberga"
+      },
+      "websiteUrl": "https://wkb.se/",
+      "menuSource": {
+        "url": "https://wkb.se/?page_id=83",
+        "category": "official_html_weekly",
+        "authority": "official",
+        "automationFeasibility": "high",
+        "observedShape": "Week heading, weekday sections, price, address, and explicit multi-week closure text."
+      },
+      "adapterId": null,
+      "researchStatus": "adapter_ready",
+      "observedAtResearch": "The source stated vacation closure during weeks 28-31. That is a reliable closed status for Stockholm week 30.",
+      "evidenceUrls": [
+        "https://wkb.se/?page_id=83",
+        "https://wkb.se/?page_id=93"
+      ]
+    },
+    {
+      "id": "the-swan",
+      "name": "The Swan",
+      "address": "Nioörtsvägen 36, 126 32 Hägersten",
+      "coordinates": {
+        "latitude": 59.3006861,
+        "longitude": 18.014473
+      },
+      "distanceMeters": 1156.4,
+      "eligible": true,
+      "discovery": {
+        "osmType": "node",
+        "osmId": 1408221928,
+        "osmUrl": "https://www.openstreetmap.org/node/1408221928",
+        "mappedName": "The Swan"
+      },
+      "websiteUrl": "https://www.theswan.se/",
+      "menuSource": {
+        "url": "https://www.theswan.se/",
+        "category": "official_html_general",
+        "authority": "official",
+        "automationFeasibility": "low",
+        "observedShape": "Official location and opening-hours page with a general menu link; no date-bearing daily lunch publication was found."
+      },
+      "adapterId": null,
+      "researchStatus": "manual_review",
+      "observedAtResearch": "The stale OSM website tag pointed to theswan.nu, which did not resolve; the current official site is theswan.se. No confirmed daily lunch source was located.",
+      "evidenceUrls": [
+        "https://www.theswan.se/"
+      ]
+    },
+    {
+      "id": "restaurant-kransen",
+      "name": "Restaurant Kransen",
+      "address": "Tegelbruksvägen 4, 126 32 Hägersten",
+      "coordinates": {
+        "latitude": 59.3022631,
+        "longitude": 18.0148264
+      },
+      "distanceMeters": 1212.2,
+      "eligible": true,
+      "discovery": {
+        "osmType": "node",
+        "osmId": 534138253,
+        "osmUrl": "https://www.openstreetmap.org/node/534138253",
+        "mappedName": "Restaurant Kransen"
+      },
+      "websiteUrl": "https://www.restaurantkransen.se/",
+      "menuSource": {
+        "url": "https://www.restaurantkransen.se/",
+        "category": "official_html_general",
+        "authority": "official",
+        "automationFeasibility": "low",
+        "observedShape": "General Italian menu without a dated lunch publication."
+      },
+      "adapterId": null,
+      "researchStatus": "unsupported",
+      "observedAtResearch": "The mapped and independently indexed weekday opening time was 15:00, so it should not be promoted as a weekday lunch source without newer official evidence. Weekend daytime service is a separate use case.",
+      "evidenceUrls": [
+        "https://www.restaurantkransen.se/"
+      ]
+    },
+    {
+      "id": "vintervikens-tradgardskafe",
+      "name": "Vintervikens Trädgårdskafé",
+      "address": "Vinterviksvägen 30, 117 65 Stockholm",
+      "coordinates": {
+        "latitude": 59.3112368,
+        "longitude": 17.9990416
+      },
+      "distanceMeters": 1357.7,
+      "eligible": true,
+      "discovery": {
+        "osmType": "node",
+        "osmId": 502523372,
+        "osmUrl": "https://www.openstreetmap.org/node/502523372",
+        "mappedName": "Cafe Vintervikens Trädgård"
+      },
+      "websiteUrl": "https://vinterviken.com/",
+      "menuSource": {
+        "url": "https://vinterviken.com/kafe/",
+        "category": "official_html_general_and_events",
+        "authority": "official",
+        "automationFeasibility": "low",
+        "observedShape": "Official site confirms daily lunch and current opening hours, while specific changing food is communicated through event pages and official social channels."
+      },
+      "adapterId": null,
+      "researchStatus": "manual_review",
+      "observedAtResearch": "Lunch availability is verified, but no stable date-bearing daily dish source was found. Event menus must not be mistaken for ordinary lunch.",
+      "evidenceUrls": [
+        "https://vinterviken.com/",
+        "https://vinterviken.com/kafe/"
+      ]
+    },
+    {
+      "id": "vastertorps-hjarta",
+      "name": "Västertorps Hjärta",
+      "address": "Störtloppsvägen 30, 129 47 Hägersten",
+      "coordinates": {
+        "latitude": 59.2936722,
+        "longitude": 17.9672747
+      },
+      "distanceMeters": 1655.5,
+      "eligible": true,
+      "discovery": {
+        "osmType": "node",
+        "osmId": 12009260853,
+        "osmUrl": "https://www.openstreetmap.org/node/12009260853",
+        "mappedName": "Västertorps Hjärta"
+      },
+      "websiteUrl": "https://vastertorpshjarta.se/",
+      "menuSource": {
+        "url": "https://vastertorpshjarta.se/",
+        "category": "official_html_weekly",
+        "authority": "official",
+        "automationFeasibility": "high",
+        "observedShape": "Week-numbered lunch, Swedish weekday sections, dish descriptions, price, and inclusions."
+      },
+      "adapterId": null,
+      "researchStatus": "adapter_candidate",
+      "observedAtResearch": "The source displayed week 26 while Stockholm was in week 30. The extractable content is demonstrably stale and must never be shown as today's confirmed lunch.",
+      "evidenceUrls": [
+        "https://vastertorpshjarta.se/"
+      ]
+    },
+    {
+      "id": "bastard-burgers-liljeholmen",
+      "name": "Bastard Burgers Liljeholmen",
+      "address": "Liljeholmstorget 5, 117 63 Stockholm",
+      "coordinates": {
+        "latitude": 59.309643,
+        "longitude": 18.0224993
+      },
+      "distanceMeters": 1973.3,
+      "eligible": true,
+      "discovery": {
+        "osmType": "node",
+        "osmId": 9049036527,
+        "osmUrl": "https://www.openstreetmap.org/node/9049036527",
+        "mappedName": "Bastard Burgers"
+      },
+      "websiteUrl": "https://bastardburgers.com/se/restaurants/liljeholmen/",
+      "menuSource": {
+        "url": "https://bastardburgers.com/se/dagens-lunch/stockholm/",
+        "category": "official_html_city_lunch",
+        "authority": "official",
+        "automationFeasibility": "medium",
+        "observedShape": "City-level daily-lunch page, restaurant list, location-specific full menu, and explicit seasonal availability message."
+      },
+      "adapterId": null,
+      "researchStatus": "adapter_candidate",
+      "observedAtResearch": "The official lunch page explicitly said there was no daily lunch during summer. The location remains open with its regular menu, but no lunch special should be inferred.",
+      "evidenceUrls": [
+        "https://bastardburgers.com/se/restaurants/liljeholmen/",
+        "https://bastardburgers.com/se/dagens-lunch/stockholm/"
+      ]
+    },
+    {
+      "id": "caffe-nero-liljeholmen-boundary",
+      "name": "Caffè Nero Liljeholmen",
+      "address": "Liljeholmstorget, Stockholm",
+      "coordinates": {
+        "latitude": 59.3097814,
+        "longitude": 18.022905
+      },
+      "distanceMeters": 2000.9,
+      "eligible": false,
+      "discovery": {
+        "osmType": "node",
+        "osmId": 12455835880,
+        "osmUrl": "https://www.openstreetmap.org/node/12455835880",
+        "mappedName": "Caffè Nero"
+      },
+      "websiteUrl": null,
+      "menuSource": null,
+      "adapterId": null,
+      "researchStatus": "outside_radius",
+      "observedAtResearch": "Excluded by coordinate distance even though it is only 0.9 m beyond the formal boundary at source precision. This close result should be rechecked whenever source coordinates change.",
+      "evidenceUrls": [
+        "https://www.openstreetmap.org/node/12455835880"
+      ]
+    },
+    {
+      "id": "thai-rung-liljeholmen-boundary",
+      "name": "Thai Rung Liljeholmen",
+      "address": "Liljeholmstorget, Stockholm",
+      "coordinates": {
+        "latitude": 59.3104328,
+        "longitude": 18.0223051
+      },
+      "distanceMeters": 2017.1,
+      "eligible": false,
+      "discovery": {
+        "osmType": "node",
+        "osmId": 1036315069,
+        "osmUrl": "https://www.openstreetmap.org/node/1036315069",
+        "mappedName": "Thai Rung"
+      },
+      "websiteUrl": "https://www.thairung.se/",
+      "menuSource": {
+        "url": "https://www.thairung.se/",
+        "category": "official_html_general",
+        "authority": "official",
+        "automationFeasibility": "low",
+        "observedShape": "Official site confirms a lunch service but does not expose a date-bearing daily menu."
+      },
+      "adapterId": null,
+      "researchStatus": "outside_radius",
+      "observedAtResearch": "Excluded solely by the 2 km Haversine rule, not by neighborhood name, search ranking, or source quality.",
+      "evidenceUrls": [
+        "https://www.thairung.se/",
+        "https://www.openstreetmap.org/node/1036315069"
+      ]
+    }
+  ]
+}
