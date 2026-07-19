@@ -1,7 +1,5 @@
 # Hägersten Lunch
 
-[![CI](https://github.com/daxos101/codex-lunch/actions/workflows/ci.yml/badge.svg)](https://github.com/daxos101/codex-lunch/actions/workflows/ci.yml)
-
 > Build a dependable and easy-to-use dashboard that helps people working near Tellusgången 2 quickly discover what nearby restaurants are serving for lunch today. The system should automatically collect, validate, and present current lunch menus every morning while making data freshness and source reliability transparent.
 
 Hägersten Lunch is a source-transparent daily lunch dashboard for people near
@@ -231,9 +229,8 @@ pnpm test:coverage
 LUNCH_LIVE_CHECK=1 pnpm --filter @lunch/scraping test -- live
 ```
 
-CI runs seed reproducibility, formatting, linting, types, all deterministic
-tests, PostgreSQL integration tests, and production builds. Dependency versions
-are locked in `pnpm-lock.yaml`; Dependabot checks npm and Actions updates.
+The commands above are the release verification suite. Dependency versions are
+locked in `pnpm-lock.yaml`; Dependabot checks npm dependency updates.
 
 ## Deployment
 

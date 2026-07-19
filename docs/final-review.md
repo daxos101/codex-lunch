@@ -33,7 +33,7 @@ release; the others are visible with honest availability states.
 | Persistent storage       | PostgreSQL migrations, snapshots, retained attempts, run summaries                                                                        | Pass   |
 | Dashboard/backend        | responsive React UI and validated Fastify JSON API                                                                                        | Pass   |
 | Automated tests          | 51 deterministic tests pass; two database integration tests and two live checks are separately gated                                      | Pass   |
-| CI configuration         | PostgreSQL service plus seed, format, ESLint, types, deterministic tests, builds                                                          | Pass   |
+| Release verification     | Seed, format, ESLint, types, deterministic tests, builds                                                                                  | Pass   |
 | Deployment               | Render Blueprint, three production Dockerfiles, Docker Compose, nginx proxy                                                               | Pass   |
 | Operations               | one/all/date collection, status, failures, summary, health, SQL and recovery runbooks                                                     | Pass   |
 | Unsupported transparency | source-by-source research table and manual-review states                                                                                  | Pass   |
@@ -77,8 +77,8 @@ docker compose config --quiet       pass
 ```
 
 The local environment did not permit Docker-daemon access, so PostgreSQL-backed
-repository tests could not run locally. They are deterministic, gated by
-`TEST_DATABASE_URL`, and the checked-in CI job supplies PostgreSQL 16. Volatile
+repository tests could not run locally. They are deterministic and gated by
+`TEST_DATABASE_URL` for environments with PostgreSQL available. Volatile
 Addfood/Landet checks are separately gated by `LUNCH_LIVE_CHECK=1` and are not
 part of the normal suite.
 

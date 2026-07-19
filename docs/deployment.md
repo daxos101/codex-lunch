@@ -28,7 +28,8 @@ advisory lock used by the worker; see Render’s
 
 ### Deploy
 
-1. Push the repository and confirm GitHub Actions passes.
+1. Run the release verification commands from the README, then push the
+   repository.
 2. In Render, create a Blueprint from
    `https://github.com/daxos101/codex-lunch.git`.
 3. Supply `CORS_ORIGINS` for the API when prompted, for example

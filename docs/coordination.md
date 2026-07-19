@@ -17,7 +17,7 @@ alignment, conflict prevention, review, and completion criteria.
 
 | Workstream                   | Ownership                                                        | Status   | Handoff                                                                      |
 | ---------------------------- | ---------------------------------------------------------------- | -------- | ---------------------------------------------------------------------------- |
-| Coordination and integration | root files, shared contracts, API, database, CI, final review    | Complete | Clean-clone verification and mission/definition-of-done review recorded      |
+| Coordination and integration | root files, shared contracts, API, database, final review        | Complete | Clean-clone verification and mission/definition-of-done review recorded      |
 | Restaurant discovery         | discovery evidence, candidates, sources, geographic verification | Complete | `ff30cbd`: 3 km net, 2 km Haversine gate, 21 reviewed candidates             |
 | Collection and extraction    | scraping package, adapters, fixtures, worker behavior            | Complete | `d7c1665`: bounded HTTP, freshness, two live adapters, scheduler/CLI         |
 | Dashboard                    | web application, accessible interaction, critical UI flows       | Complete | `a20a1d5`: responsive source-transparent UI and six deterministic flow tests |
@@ -41,7 +41,7 @@ alignment, conflict prevention, review, and completion criteria.
 - [x] Architecture and contracts established.
 - [x] Reproducible restaurant inventory verified.
 - [x] End-to-end collection and dashboard vertical slice.
-- [x] Reliability, operations, fixtures, and CI configuration.
+- [x] Reliability, operations, fixtures, and local release verification.
 - [x] Clean-checkout verification.
 - [x] Coordinator definition-of-done review.
 - [x] Coherent commits pushed to GitHub.
