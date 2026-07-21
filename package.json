@@ -23,16 +23,16 @@
     "worker": "pnpm --filter @lunch/worker exec tsx src/cli.ts"
   },
   "devDependencies": {
-    "@eslint/js": "^9.30.0",
-    "@types/node": "^24.0.0",
-    "eslint": "^9.30.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-    "globals": "^16.2.0",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.1.1",
+    "eslint": "^10.7.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.3",
+    "globals": "^17.7.0",
     "prettier": "^3.6.2",
     "tsup": "^8.5.0",
-    "typescript": "^5.8.3",
-    "typescript-eslint": "^8.35.1",
-    "vitest": "^3.2.4"
+    "typescript": "^7.0.2",
+    "typescript-eslint": "^8.65.0",
+    "vitest": "^4.1.10"
   }
 }
